@@ -24,5 +24,10 @@ export const config = {
         ],
         shopee: ["shopee.com.br", "shopee.com"],
         aliExpress: ["aliexpress.com"],
+        magalu: [
+            "magazineluiza.com.br",
+            "magazinevoce.com.br",
+            "magazineluiza.onelink.me"
+        ],
     }
 }
