@@ -1,13 +1,13 @@
 import AmazonCaptchaPlugin from "@mihnea.dev/puppeteer-extra-amazon-captcha"
 import { PuppeteerExtra, VanillaPuppeteer, } from "puppeteer-extra"
 import StealthPlugin from "puppeteer-extra-plugin-stealth"
-import { executablePath } from "puppeteer"
+import { CookieData, executablePath } from "puppeteer"
 
 import { requireVanillaPuppeteer } from "../utils/require-vanilla-puppeteer"
 import { removeQueryParams } from "../utils/remove-query-params"
 
 export type AmazonServiceOptions = {
-    cookies: any[]
+    cookies: CookieData[]
     puppeteer?: Parameters<VanillaPuppeteer["launch"]>[0]
 }
 
