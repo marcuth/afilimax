@@ -1,12 +1,12 @@
 import { requireVanillaPuppeteer } from "../utils/require-vanilla-puppeteer"
-import { executablePath, LaunchOptions, Page } from "puppeteer"
+import { CookieData, executablePath, LaunchOptions, Page } from "puppeteer"
 import StealthPlugin from "puppeteer-extra-plugin-stealth"
 import { PuppeteerExtra } from "puppeteer-extra"
 
 import { removeQueryParams } from "../utils/remove-query-params"
 
 export type MercadoLivreServiceOptions = {
-    cookies: any[]
+    cookies: CookieData[]
     puppeteer?: LaunchOptions
 }
 
