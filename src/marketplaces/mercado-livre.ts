@@ -1,5 +1,5 @@
-import { executablePath, LaunchOptions, Page } from "puppeteer"
 import { requireVanillaPuppeteer } from "../utils/require-vanilla-puppeteer"
+import { executablePath, LaunchOptions, Page } from "puppeteer"
 import StealthPlugin from "puppeteer-extra-plugin-stealth"
 import { PuppeteerExtra } from "puppeteer-extra"
 
