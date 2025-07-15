@@ -7,7 +7,7 @@ import { requireVanillaPuppeteer } from "../utils/require-vanilla-puppeteer"
 export type MagazineLuizaServiceOptions = {
     cookies: CookieData[]
     puppeteer?: LaunchOptions
-    affilateSlug: string
+    affiliateSlug: string
 }
 
 export class MagazineLuizaService {
@@ -24,9 +24,9 @@ export class MagazineLuizaService {
         const isShortAffiliateUrl = url.includes("magazineluiza.onelink.me")
 
         if (isMainDomain) {
-            return url.replace("magazineluiza.com.br", `magazinevoce.com.br/${this.options.affilateSlug}`)
+            return url.replace("magazineluiza.com.br", `magazinevoce.com.br/${this.options.affiliateSlug}`)
         } else if (isAffiliateUrl) {
-            return url.replace(/(magazinevoce\.com\.br)\/[^/]+/, `$1/${this.options.affilateSlug}`)
+            return url.replace(/(magazinevoce\.com\.br)\/[^/]+/, `$1/${this.options.affiliateSlug}`)
         } else if (isShortAffiliateUrl) {
             await page.goto(url, { waitUntil: "load" })
             return await this.resolveProductUrl(page, page.url())
