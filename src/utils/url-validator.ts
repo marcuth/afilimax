@@ -30,11 +30,22 @@ export function isShopeeUrl(url: string): boolean {
     const shopeeRegex = new RegExp(
         `^https?://(?:www\\.)?(?:${domainPattern})/(?:.+-)?i\\.\\d+\\.\\d+|^https://shp\\.ee/[\\w\\d]+`,
         "i"
-    );
+    )
 
     return shopeeRegex.test(url)
 }
 
+export function isMagazineLuizaUrl(url: string): boolean {
+    const domainPattern = config.domains.magalu.join("|")
+
+    const magaluRegex = new RegExp(
+        `^https?://(?:www\\.)?(?:${domainPattern})/(?:.+)?`,
+        "i"
+    )
+
+    return magaluRegex.test(url)
+}
+
 export const isValidUrl = (url: string): boolean => {
-    return isAmazonProductUrl(url) || isMercadoLivreUrl(url) || isAliExpressUrl(url) || isShopeeUrl(url)
+    return isAmazonProductUrl(url) || isMercadoLivreUrl(url) || isAliExpressUrl(url) || isShopeeUrl(url) || isMagazineLuizaUrl(url)
 }
