@@ -1,14 +1,20 @@
 {
   "name": "afilimax",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "Crie URLs de afiliado de diversas plataformas com uma única instância!",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/*",
+    "!/**/__tests__"
+  ],
   "scripts": {
     "build": "tsc"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Marcuth",
+  "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
     "@types/node": "^24.0.13",
@@ -22,5 +28,13 @@
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
     "winston": "^3.17.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcuth/afilimax.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marcuth/afilimax/issues"
+  },
+  "homepage": "https://github.com/marcuth/afilimax#readme"
 }
