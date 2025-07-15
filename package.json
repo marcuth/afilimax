@@ -1,6 +1,6 @@
 {
   "name": "afilimax",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Crie URLs de afiliado de diversas plataformas com uma única instância!",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
