@@ -28,7 +28,7 @@ export function isShopeeUrl(url: string): boolean {
     const domainPattern = config.domains.shopee.join("|")
 
     const shopeeRegex = new RegExp(
-        `^https?://(?:www\\.)?(?:${domainPattern})/(?:.+-)?i\\.\\d+\\.\\d+|^https://shp\\.ee/[\\w\\d]+`,
+        `^https?://(?:www\\.|s\\.)?(?:${domainPattern})/(?:.+-)?i\\.\\d+\\.\\d+|^https://shp\\.ee/[\\w\\d]+`,
         "i"
     )
 
